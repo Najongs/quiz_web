@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수수께끼 퀴즈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="coin-display" class="coin-display">
+        코인: <span id="coin-count">0</span>
+    </div>
+
+    <div class="container" id="start-page">
+        <img src="/home/najo/NAS/quiz_web/image.webp" alt="문제 출제자 사진" class="quiz-master-photo">
+        <h1>수수께끼 퀴즈에 도전하세요!</h1>
+        <button id="start-button" class="btn btn-primary">시작하기</button>
+    </div>
+
+    <div class="container hidden" id="quiz-selection">
+        <h2>문제를 선택하세요!</h2>
+        <div class="quiz-buttons">
+            <button class="quiz-button btn btn-secondary" data-question="1">문제 1</button>
+            <button class="quiz-button btn btn-secondary" data-question="2">문제 2</button>
+            <button class="quiz-button btn btn-secondary" data-question="3">문제 3</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="quiz-page">
+        <h2 id="quiz-question"></h2>
+        <input type="text" id="user-answer" placeholder="답을 입력하세요" />
+        <button id="submit-answer" class="btn btn-primary">제출하기</button>
+        <p id="feedback-message" class="hidden"></p>
+        <button id="hint-button" class="btn btn-secondary hidden">힌트 보기</button>
+        <p id="hint-message" class="hidden">힌트: <span id="hint"></span></p>
+        <button id="back-button" class="btn btn-secondary">뒤로 가기</button>
+    </div>
+
+    <div class="container hidden" id="success-page">
+        <h1>축하합니다! 🎉</h1>
+        <p>수수께끼 퀴즈에서 코인 3개를 모두 모았습니다!</p>
+        <div id="fireworks"></div>
+        <button id="restart-button" class="btn btn-primary">다시 시작하기</button>
+    </div>
+
+    <div id="coin-animation" class="hidden">+1 코인!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
